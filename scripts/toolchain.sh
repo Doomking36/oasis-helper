@@ -1,5 +1,5 @@
 #!/bin/sh -e
 
-curl -O http://musl.cc/x86_64-linux-musl-cross.tgz
-zcat x86_64-linux-musl-cross.tgz | pax -r
-PATH=$PATH:$PWD/x86_64-linux-musl-cross/bin
+curl -s musl.cc | grep x86_64-linux-musl-native | xargs curl '-#' -fo /mnt/src/packages/x86_64-linux-musl-native.tgz 
+mkdir -p /mnt/src/gcc-toolchain/ 
+tar -xzf /mnt/src/packages/x86_64-linux-musl-native.tgz -C /mnt/src/gcc-toolchain/ --strip-components=1

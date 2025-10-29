@@ -1,4 +1,4 @@
 #!/bin/sh -e
 
 # Needed packages before starting the installation
-pacman -Sy git curl tar unzip bash base-devel vim
+pacman -Sy bison curl git ninja lua pax wayland libpng nasm vim
